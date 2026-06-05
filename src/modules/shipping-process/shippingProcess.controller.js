@@ -2,17 +2,9 @@ import {
   createShippingProcessService,
   getAllShippingProcessService,
 } from "./shippingProcess.service.js";
-
+import { shippingProcessValidation } from "./shippingProcess.validation.js";
 export const createShippingProcess = async (req, res) => {
   try {
-
-
-    console.log("FILES =>", req.files);
-    console.log("BODY =>", req.body);
-
-    console.log("FILES =>", req.files);
-
-    console.log("IMAGES =>", req.files?.images);
     console.log("IMAGES LENGTH =>", req.files?.images?.length);
     if (!req.files?.images || req.files.images.length === 0) {
   return res.status(400).json({
