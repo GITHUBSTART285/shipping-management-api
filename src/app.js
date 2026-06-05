@@ -10,6 +10,7 @@ import policyRoutes from "./modules/policy/policy.routes.js";
 import featureRoutes from "./modules/features/feature.routes.js";
 import featureBannerRoutes from "./modules/feature-banner/featureBanner.routes.js";
 import shippingProcessRouter from "./modules/shipping-process/shippingProcess.routes.js";
+import shippingAudienceRouter from "./modules/shipping-audience/shippingAudience.routes.js";
 const app = express();
 //  1. CORS FIRST
 app.use(cors({
@@ -36,6 +37,7 @@ app.use("/api/policies", policyRoutes);
 app.use("/api/features", featureRoutes);
 app.use("/api/feature-banner", featureBannerRoutes);
 app.use("/api/shipping-process",shippingProcessRouter);
+app.use("/api/shipping-audience", shippingAudienceRouter);
 // Health check
 app.get("/", (req, res) => {
   res.status(200).json({
