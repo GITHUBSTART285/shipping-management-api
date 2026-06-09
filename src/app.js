@@ -13,6 +13,9 @@ import shippingProcessRouter from "./modules/shipping-process/shippingProcess.ro
 import shippingAudienceRouter from "./modules/shipping-audience/shippingAudience.routes.js";
 import shippingCategoryRouter from "./modules/shipping-category/shippingCategory.routes.js";
 import appointmentRoutes from "./modules/appointmentDelivery/appointment.routes.js";
+import dealRoutes from "./modules/deal/deal.routes.js";
+import segmentRoutes from "./modules/segment/segment.routes.js";
+
 const app = express();
 //  1. CORS FIRST
 app.use(cors({
@@ -42,6 +45,8 @@ app.use("/api/shipping-process",shippingProcessRouter);
 app.use("/api/shipping-audience", shippingAudienceRouter);
 app.use("/api/shipping-category",shippingCategoryRouter);
 app.use("/api/appointment", appointmentRoutes);
+app.use("/api/deals", dealRoutes);
+app.use("/api/segments", segmentRoutes);
 // Health check
 app.get("/", (req, res) => {
   res.status(200).json({
