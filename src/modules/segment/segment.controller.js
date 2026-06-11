@@ -2,7 +2,7 @@ import asyncHandler from "express-async-handler";
 import {
   createSegmentService,
   getAllSegmentService,
-  getSegmentBySlugService,
+  
 } from "./segment.service.js";
 
 export const createSegment = asyncHandler(async (req, res) => {
@@ -23,11 +23,3 @@ export const getAllSegments = asyncHandler(async (req, res) => {
   });
 });
 
-export const getSegmentBySlug = asyncHandler(async (req, res) => {
-  const data = await getSegmentBySlugService(req.params.slug);
-
-  res.status(200).json({
-    success: true,
-    data,
-  });
-});

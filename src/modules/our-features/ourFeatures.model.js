@@ -1,22 +1,22 @@
 import mongoose from "mongoose";
 
-const courierSchema = new mongoose.Schema(
+const ourFeaturesSchema = new mongoose.Schema(
   {
     title: {
       type: String,
       required: true,
     },
-    description: {
-      type: String,
-      required: true,
-    },
-    couriers: [
+    features: [
       {
-        name: {
+        title: {
           type: String,
           required: true,
         },
-        logo: {
+        description: {
+          type: String,
+          required: true,
+        },
+        image: {
           type: String,
           required: true,
         },
@@ -28,4 +28,6 @@ const courierSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Courier", courierSchema);
+const OurFeatures = mongoose.model("OurFeatures", ourFeaturesSchema);
+
+export default OurFeatures;

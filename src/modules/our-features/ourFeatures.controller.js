@@ -1,11 +1,11 @@
 import {
-  createCourierService,
-  getCouriersService,
-} from "./courier.service.js";
+  createOurFeatureService,
+  getOurFeaturesService,
+} from "./ourFeatures.service.js";
 
-export const createCourier = async (req, res) => {
+export const createOurFeature = async (req, res) => {
   try {
-    const data = await createCourierService(req.body);
+    const data = await createOurFeatureService(req.body);
 
     res.status(201).json({
       success: true,
@@ -19,9 +19,9 @@ export const createCourier = async (req, res) => {
   }
 };
 
-export const getCouriers = async (req, res) => {
+export const getOurFeatures = async (req, res) => {
   try {
-    const data = await getCouriersService();
+    const data = await getOurFeaturesService();
 
     res.status(200).json({
       success: true,

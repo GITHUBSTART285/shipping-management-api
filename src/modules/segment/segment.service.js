@@ -8,6 +8,3 @@ export const getAllSegmentService = async () => {
   return await Segment.find();
 };
 
-export const getSegmentBySlugService = async (slug) => {
-  return await Segment.findOne({ slug });
-};

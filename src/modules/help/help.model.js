@@ -1,22 +1,18 @@
 import mongoose from "mongoose";
 
-const courierSchema = new mongoose.Schema(
+const helpSchema = new mongoose.Schema(
   {
     title: {
       type: String,
       required: true,
     },
-    description: {
-      type: String,
-      required: true,
-    },
-    couriers: [
+    features: [
       {
-        name: {
+        title: {
           type: String,
           required: true,
         },
-        logo: {
+        description: {
           type: String,
           required: true,
         },
@@ -28,4 +24,6 @@ const courierSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Courier", courierSchema);
+const Help = mongoose.model("Help", helpSchema);
+
+export default Help;
