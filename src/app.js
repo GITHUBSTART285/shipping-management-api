@@ -28,7 +28,8 @@ import internationalServiceRoutes from "./modules/international-services/interna
 import internationalBenefitRoutes from "./modules/international-benefits/internationalBenefit.routes.js";
 import internationalServiceFeatureRoutes from "./modules/international-service-features/internationalServiceFeature.routes.js";
 import internationalProcessRoutes from "./modules/international-process/internationalProcess.routes.js";
-
+import whatWeOfferRoutes from "./modules/what-we-offer/whatWeOffer.routes.js";
+import internationalSolutionRoutes from "./modules/international-solutions/internationalSolution.routes.js";
 const app = express();
 //  1. CORS FIRST
 app.use(cors({
@@ -71,6 +72,10 @@ app.use("/api/international-services", internationalServiceRoutes);
 app.use("/api/international-benefits",internationalBenefitRoutes);
 app.use("/api/international-service-features",internationalServiceFeatureRoutes);
 app.use("/api/international-process", internationalProcessRoutes); 
+app.use("/api/what-we-offer",whatWeOfferRoutes);
+app.use("/api/international-solutions",internationalSolutionRoutes);
+ 
+  
 
 
 // Health check
