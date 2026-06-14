@@ -23,7 +23,10 @@ import ourFeaturesRoutes from "./modules/our-features/ourFeatures.routes.js";
 import helpRoutes from "./modules/help/help.routes.js";
 import internationalBannerRoutes from "./modules/international-banner/internationalBanner.routes.js";
 import internationalServiceRoutes from "./modules/international-services/internationalService.routes.js";
+
+
 import internationalBenefitRoutes from "./modules/international-benefits/internationalBenefit.routes.js";
+import internationalServiceFeatureRoutes from "./modules/international-service-features/internationalServiceFeature.routes.js";
 const app = express();
 //  1. CORS FIRST
 app.use(cors({
@@ -64,6 +67,8 @@ app.use("/api/help", helpRoutes);
 app.use("/api/international-banner", internationalBannerRoutes);
 app.use("/api/international-services", internationalServiceRoutes);
 app.use("/api/international-benefits",internationalBenefitRoutes);
+app.use("/api/international-service-features",internationalServiceFeatureRoutes);
+  
 
 
 // Health check
