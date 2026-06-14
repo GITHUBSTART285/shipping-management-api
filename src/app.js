@@ -12,6 +12,9 @@ import featureBannerRoutes from "./modules/feature-banner/featureBanner.routes.j
 import shippingProcessRouter from "./modules/shipping-process/shippingProcess.routes.js";
 import shippingAudienceRouter from "./modules/shipping-audience/shippingAudience.routes.js";
 import shippingCategoryRouter from "./modules/shipping-category/shippingCategory.routes.js";
+import internationalBannerRoutes from "./modules/international-banner/internationalBanner.routes.js";
+import internationalServiceRoutes from "./modules/international-services/internationalService.routes.js";
+import internationalBenefitRoutes from "./modules/international-benefits/internationalBenefit.routes.js";
 const app = express();
 //  1. CORS FIRST
 app.use(cors({
@@ -40,7 +43,11 @@ app.use("/api/feature-banner", featureBannerRoutes);
 app.use("/api/shipping-process",shippingProcessRouter);
 app.use("/api/shipping-audience", shippingAudienceRouter);
 app.use("/api/shipping-category",shippingCategoryRouter);
- 
+app.use("/api/international-banner", internationalBannerRoutes);
+app.use("/api/international-services", internationalServiceRoutes);
+app.use("/api/international-benefits",internationalBenefitRoutes);
+  
+  
 
 // Health check
 app.get("/", (req, res) => {
